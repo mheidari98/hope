@@ -31,6 +31,8 @@ cp /etc/letsencrypt/live/api.yourDomain.com/privkey.pem .
 cp /etc/letsencrypt/ssl-dhparams.pem .
 cp /etc/letsencrypt/options-ssl-nginx.conf .
 
+cd ..
+
 # install docker
 curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh
 
