@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+    web:
+        build: nginx
+        ports:
+          - 80:80
+          - 443:443
+        depends_on:
+          - api
+        restart: always
+
+    api:
+        build: proxy
+        environment:
+          - PORT=8080
+        ports:
+          - 8080:8080
